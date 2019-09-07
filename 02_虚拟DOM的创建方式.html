@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="app2"></div>
+</body>
+<script src="./js/react.development.js"></script>
+<script src="./js/react-dom.development.js"></script>
+<script src="./js/babel.min.js"></script>
+<script type="text/babel">
+  // 第一种 函数的方式创建(通过以下方式创建)
+  const vDom1 = React.createElement('h2', {
+    id: 'myId',
+    className: 'myClassName'
+  }, 'helloReact');
+  // 参数是创建了什么标签, 标签的属性是什么, 标签中的内容
+  ReactDOM.render(vDom1, document.querySelector('#app'));
+
+  // 第二种方式 JSX语法来创建
+  const vDom2 = <h2 id='myID2' className='myClassName2'>helloReact</h2>
+  ReactDOM.render(vDom2, document.querySelector('#app2'))
+</script>
+</html>

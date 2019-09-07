@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <p>
+    组件的state属性
+    state被称为状态机
+    它的值是一个对象(对象中的值可以包含多数据类型)
+    它用来定义组件初始化的时候所需要用到的状态数据
+    只要用户界面会发生变化,都是需要更新state来完成
+
+    state的使用有3个步骤(初始化-读取-更新)
+    先初始化数据 > 读取初始化状态数据的值 > 更新初始化数据值已达到更新页面显示
+  </p>
+</body>
+<script src="./js/react.development.js"></script>
+<script src="./js/react-dom.development.js"></script>
+<script src="./js/babel.min.js"></script>
+<!-- 老版本的写法 -->
+<!--<script type="text/babel">
+  /* 需求: 点击 h2 之后文字变为你喜欢我 */
+  // 因为用户界面会发生变化,所以一定需要用到state
+
+  // 创建组件
+  class LikeMe extends React.Component{
+    constructor() {
+      super();
+      // 1初始化state中的状态数据,必须写在constructor内
+      this.state = {
+        isLikeMe: true
+      }
+
+      // 注意点: 改变switch方法中的this指向
+      this.switch = this.switch.bind(this);
+    }
+
+    // 定义的方法是给实例对象用的 等价于 LikeMe.prototype.switch = function(){}
+    switch() {
+      // 3我们在更新state中的数据之前,需要获取到哪个数据需要被更新
+      const {isLikeMe} = this.state;
+
+      // 4点击h2后更新state中初始化isLikeMe的值
+      //  必须要使用 this.setState方法来更新state中初始化的数据
+      this.setState({
+        isLikeMe : !isLikeMe
+      })
+    }
+
+    render() {
+      // 2哪里需要用到state定义的状态数据值就在那里读取
+      const {isLikeMe} = this.state;
+      return(
+        <h2 onClick={this.switch}>{isLikeMe ? '我喜欢你' : '你喜欢我'}</h2>
+      )
+    }
+  }
+  // 渲染组件
+  ReactDOM.render(<LikeMe />, document.getElementById('app'));
+
+  /*
+    注意点: 在react中,使用class关键字定义的组件中(第40行)
+           如果在内部定义了自定义的方法,那么这个自定义方法中的this指向的是undefined
+           但是我们需要 this要指向的是类的实例对象,这时候我们需要在  constructor 中进行以下操作来改变自定义方法中的this指向
+           this.switch = this.switch.bind(this)
+           constructor中的this指向实例对象, bind方法返回一个新函数
+           而且在这个位置写,只会执行一次就改变了自定义方法的this的指向
+  */
+</script>-->
+
+<!-- 新版本的写法 -->
+<script type="text/babel">
+  class LikeMe extends React.Component{
+    // 1初始化数据状态
+    state = {
+      isLikeMe : true
+    }
+
+    // 3改变数据状态的值
+    // ***重点:class定义的组件中,自定义的方法使用箭头函数就可以完成this指向组件实例对象的自动修改,不需要每次都手动绑定
+    switch = () => {
+      // 哪里想要使用到state中的数据就读取一次
+      const {isLikeMe} = this.state
+      this.setState({
+        isLikeMe : !isLikeMe
+      })
+    }
+
+    render() {
+      // 2读取数据状态的值
+      const {isLikeMe} = this.state
+      return (
+        <h2 onClick={this.switch}>{isLikeMe ? '我喜欢你' : '你喜欢我'}</h2>
+      )
+    }
+  }
+  ReactDOM.render(<LikeMe/>, document.querySelector('#app'));
+
+
+</script>
+</html>

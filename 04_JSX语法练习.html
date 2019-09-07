@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <h2>react如何动态的展示数据?</h2>
+  <div id="app"></div>
+</body>
+<!-- 使用react的时候需要先引入react所需要的依赖库 -->
+<script src="./js/react.development.js"></script>
+<script src="./js/react-dom.development.js"></script>
+<script src="./js/babel.min.js"></script>
+<script type="text/babel">
+  // 数据
+  const arr = ['篮球', '足球', '棒球', '网球', '棒球'];
+  //创建虚拟DOM对象
+  const vDom = (
+    // react 中它会帮助我们自动遍历展开数组
+    <ul>
+      {
+        arr.map((item, index) => {
+          return (
+            <li key={index}>{item + 'OvO '}</li>
+          )
+        })
+      }
+    </ul>
+  );
+  // ***每个标签都有公共的属性props: 它的值是一个对象,对象里面的children属性保存了标签内的内容
+  // 渲染虚拟DOM对象到指定的容器
+  console.log(vDom);
+  ReactDOM.render(vDom, document.querySelector('#app'));
+
+</script>
+</html>

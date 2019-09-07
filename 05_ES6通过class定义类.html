@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <p>构造函数使用来做什么? > 为了生成我们要使用的实例对象</p>
+</body>
+<script>
+  // 使用ES6之前的语法定义一个构造函数和给构造函数的实例对象添加属性
+  // 给实例对象添加方法,实例对象继承的是构造函数原型链上的方法或者属性,不能继承构造函数自身上私有的属性或者方法
+  function Father(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  Father.prototype.setName = function (name) {
+    this.name = name;
+  }
+  // const son = new Father('ll', 18)
+
+  /* ES6之前的语法实现继承 */
+  // 实现继承属性
+  function Son(name, age, sex) {
+    Father.call(this, name, age);
+    this.sex = sex;
+  }
+  // 实现继承方法
+  Son.prototype.__proto__ = Father.prototype;
+  const son = new Son('ll', 18, 'man');
+  console.log(son);
+
+
+  // 使用ES6 的 class 定义构造函数,或者称为定义类
+  /* 使用class关键字来定义类 */
+  class Person {
+    // 通过class关键字定义的类,如果要给类的实例对象添加属性,必须要写到constructor(){}这个方法内
+    constructor(name, age) {
+      this.name = name
+      this.age = age
+    }
+    // 如果要给类的实例对象添加方法必须要以对象的简写方式
+    setName(name) {
+      this.name = name
+    }
+  }
+  // 类的使用和构造函数一样 也是使用 new关键字调用
+  const person = new Person('lisha', 18)
+
+
+  // 使用ES6的class类的语法实现继承
+  // 定义一个People类 继承于 Person类,这样 People的实例对象上就会拥有Person的属性或者方法了
+  class People extends Person{
+    constructor(name, age, sex) {
+      super(name, age);
+      // 使用继承必须要在constructor方法中调用 super()方法,并且要接前者的传值;super调用会调用父类的constructor方法
+      // 或者可以直接不写constructor()方法和 super方法
+
+      // 自己类的方法可以写在constructor方法中
+      this.sex = sex
+    }
+    // 这里面可以写People的自己的一些方法
+    xianNv() {
+      console.log('叫我大人')
+    }
+  }
+  const p = new People('lin', 18, 'man');
+  p.xianNv()
+  console.log(p)
+
+</script>
+</html>

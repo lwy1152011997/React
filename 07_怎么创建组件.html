@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+<div id="app1"></div>
+<div id="app2"></div>
+</body>
+<script src="./js/react.development.js"></script>
+<script src="./js/react-dom.development.js"></script>
+<script src="./js/babel.min.js"></script>
+<script type="text/babel">
+  // react 中怎么创建组件?
+  // 1 使用工厂函数的方式创建组件,一般用来定义简单的组件
+  function MyComponent() {
+    console.log(this);
+    // 使用用工厂函数的模式创建的组件 this 指向 undefined 因为这里的环境是处于严格模式下的,禁止 this 指向window
+    return (
+      <h2>大家好,大家好</h2>
+    )
+  }
+  ReactDOM.render(<MyComponent />, document.querySelector('#app1'));
+
+  // 2 使用class类的方式创建组件
+  class MyComponent2 extends React.Component{
+    // 使用class类的方式创建组件,必须要有一个render()方法,和return出来组件的结构
+    render() {
+      console.log(this); // 组件内的 this 指向组件的实例对象
+      return (
+        <p>我家门前有两棵树</p>
+      )
+    }
+  }
+  ReactDOM.render(<MyComponent2 />,document.getElementById('app2'));
+
+</script>
+</html>

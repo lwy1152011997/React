@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+<div id="app"></div>
+<div id="app2"></div>
+<div id="app3"></div>
+</body>
+<script src="./js/react.development.js"></script>
+<script src="./js/react-dom.development.js"></script>
+<script src="./js/babel.min.js"></script>
+<script type="text/babel">
+  /*
+    什么是 React JSX?
+      它是一种 JavaScript 的语法扩展,我们在使用React时,用它来创建虚拟DOM结构
+      我们在使用 React 框架时,推荐使用 JSX 语法来编写。
+      他就是用来创建虚拟DOM对象的
+  */
+
+  // 语法1:
+  const vDom = <h2>今天是个好日子</h2>;
+  /*
+    使用JSX语法创建一个虚拟DOM结构,但是不会被实际渲染,只有被ReactDOM.render方法渲染到指定的容器中时才会被实际渲染为真实DOM
+    如果写的html标签,那么就会解析成html标签
+    如果是自定义的标签那么我们称为组件,而且自定义的标签(组件)的开头字母需要以大写开头
+  */
+
+  // 语法2: 如果写的标签是一个单标签,必须要加闭合符号
+  const vDOM2 = <img src="xxx" alt="xxx"/>;
+
+  // 语法3: 如果要给标签中添加class类名的话,我们要使用className,因为class是关键字不能直接使用
+  const vDom3 = <h1 className="myClassName">荔枝</h1>;
+
+  // 语法4: 如果要给标签添加样式,必须要以json的格式来书写
+  const vDom4 = <p id="myId" style={{'width': '100px', 'height': '200px', 'color': 'red'}}>再苦的日子你都要自律</p>;
+
+  // 语法5: 如果标签中想要写js代码,需要把js代码写在{}内
+  // {} 一个大括号表示里面要写js代码 {{}} 两个大括号说明里面要写的是对象
+  const myClassname = 'liZhi';
+  const contentText = '再苦的日子也别忘了自律与学习';
+  const vDom5 = <p id={myClassname}>{contentText}</p>;
+  ReactDOM.render(vDom5, document.querySelector('#app'));
+
+  // 语法5:标签中添加的事件名,必须使用驼峰命名法
+  const ball = '篮球';
+  const ev = <div onClick={function () {
+    alert(ball)
+  }}>点我就送</div>;
+  ReactDOM.render(ev, document.querySelector('#app2'));
+
+  // 语法6:如果需要写多个标签,必须要用一个包裹容器把这些标签都包裹起来
+  const lis = (
+    <ul className="myLi">
+      <li>{myClassname}</li>
+      <li>{contentText}</li>
+      <li>{ball}</li>
+    </ul>
+  )
+  ReactDOM.render(lis, document.querySelector('#app3'));
+
+</script>
+</html>
