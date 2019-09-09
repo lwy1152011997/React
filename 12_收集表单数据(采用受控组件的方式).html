@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <p>
+    什么是受控组件?(使用state和onChange事件来完成)
+    我们在向表单中输入数据的时候,表单中输入的数据会被自动收集;
+    采用state来初始化表单中的数据,然后利用表单中的onChange事件触发来更新state中的数据
+    onChange事件会在input输入框的中值发生变化的时候调用它的回调函数
+  </p>
+</body>
+<script src="./js/react.development.js"></script>
+<script src="./js/react-dom.development.js"></script>
+<script src="./js/prop-types.js"></script>
+<script src="./js/babel.min.js"></script>
+<!-- 需求: 点击登录收,收集表单中的数据显示出来,而且不将表单数据提交 -->
+<script type="text/babel">
+  // 使用受控组件的方式 自动收集表单中的数据
+  class Form extends React.Component{
+    state = {
+      usernameVal: '',
+      pwsVal: ''
+    }
+    /* usernameChange = (ev) => {
+      const inputVal = ev.target.value;
+      this.setState({
+        usernameVal: inputVal
+      })
+    }
+    pwdChange = (ev) => {
+      const pwdVal = ev.target.value;
+      this.setState({
+        pwsVal: pwdVal
+      })
+    } */
+    // 上面的两个方法可以简写为一个方法, 高阶函数,使用的时候需要先主动调用才能得到实际需要的回调函数
+    dataChange = (stateName) => {
+      return (ev) => {
+        this.setState({
+          [stateName]: ev.target.value
+        })
+      }
+    }
+
+    commit = (ev) => {
+      const {usernameVal, pwsVal} = this.state
+      ev.preventDefault();
+      alert('用户名:' + usernameVal + '密码是:' + pwsVal);
+      // 仅仅是清空state中的状态数据,我们需要将input中的value也置为空
+      this.setState({
+        usernameVal: '',
+        pwsVal: ''
+      })
+    }
+
+    render() {
+      const {usernameVal, pwsVal} = this.state
+      return (
+        <form onSubmit={this.commit}>
+          用户名: <input type="text" onChange={this.dataChange('usernameVal')} value={usernameVal}/> <br/>
+          密码: <input type="password" onChange={this.dataChange('pwsVal')} value={pwsVal}/> <br/>
+          <input type="submit" value="登录"/>
+        </form>
+      )
+    }
+  }
+  ReactDOM.render(<Form/>, document.querySelector('#app'));
+  // 注意点,只要更新数据状态,就会重新调用render方法,render方法里面的代码就会重新执行一遍,然后重新渲染组件
+</script>
+</html>

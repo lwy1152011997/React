@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <p>
+    组件实例对象上的refs属性
+      refs 是用来做什么的?
+        可以用来操作真实DOM,获取真实的DOM元素(有时候我们不得不操作DOM的时候就可以用到refs)
+
+      我们通过给组件标签内部的虚拟DOM元素添加 ref属性,来对其对应的真实DOM元素进行标识
+
+    用法:
+      <div ref={this.createRef}></div>
+      通过给虚拟DOM对象添加 ref属性 值为 this.createRef
+      然后在组件实例对象的constructor方法中使用this.createRef = React.createRef()
+  </p>
+</body>
+<script src="./js/react.development.js"></script>
+<script src="./js/react-dom.development.js"></script>
+<script src="./js/prop-types.js"></script>
+<script src="./js/babel.min.js"></script>
+<script type="text/babel">
+  // 需求: 点击按钮提示输入框中的数据,数去焦点时提示输入框中的数据
+
+  // 定义组件
+  class MyInput extends React.Component{
+    /* 重点: 只要是在组件内部,有赋值符号的就是在组件的实例对象添加的直接方法或者直接属性,
+            只要没有赋值符号的就是在组件的原型上添加的属性或者方法
+    */
+
+
+    /*constructor() {
+      super();
+      this.createRef = React.createRef();
+      // React.createRef()这个方法会创建 {current: null} 这样一个对象,
+      // 然后再实例对象上添加一个createRef属性 并将上面的对象赋值给createRef这个属性
+      // 如果想要让 this.createRef的值 {current: null} 当中的null为我们想要的DOM对象
+      // 我们只需要在指定DOM对象上 添加 ref=this.createRef, 那么此时current的值就会是指定的哪个DOM元素
+    }*/
+    // 上面代码的简写方式
+    createRef = React.createRef();
+
+    showData = () => {
+      const value = this.createRef.current.value;
+      alert(value);
+      this.createRef.current.value = '';
+    }
+    showData1 = (ev) => {
+      alert(ev.target.value);
+      /*
+      注意点: 我们什么时候用ref 什么时候用ev.target?
+             当我们想要在某个DOM元素上触发事件来获取到这个元素身上的数据的时候就用 ev.target
+             如果我们想要在某个元素上触发事件,来获取到的是其他元素身上数据的时候就用ref
+
+             但是 ref我们秉承着能不用就不用的原则,因为react中不推荐我们直接操作DOM,但是有时候又不得不用
+             https://blog.csdn.net/huangjianfeng21/article/details/96481159
+      */
+    }
+
+    render() {
+      console.log(this);
+      return (
+        <div>
+          <input type="text" ref={this.createRef}/> <br/>
+          <button onClick={this.showData}>点击提示输入框中的数据</button> <br/>
+          <input placeholder="失去焦点提示数据" type="text" onBlur={this.showData1}/> <br/>
+        </div>
+      )
+    }
+  }
+
+  // 渲染组件
+  ReactDOM.render(<MyInput/>, document.querySelector('#app'));
+</script>
+</html>

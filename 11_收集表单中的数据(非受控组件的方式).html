@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <p>
+    什么是非受控组件?
+      我们在向表单中输入数据的时候,需要手动的读取表单中的数据
+
+    什么是受控组件?
+    我们在向表单中输入数据的时候,表单中输入的数据会被自动收集
+  </p>
+</body>
+<script src="./js/react.development.js"></script>
+<script src="./js/react-dom.development.js"></script>
+<script src="./js/prop-types.js"></script>
+<script src="./js/babel.min.js"></script>
+<!-- 需求: 点击登录收,收集表单中的数据显示出来,而且不将表单数据提交 -->
+<script type="text/babel">
+  // 创建组件
+  class Form extends React.Component {
+    usernameRef = React.createRef();
+    pwdRef = React.createRef();
+    commit = (ev) => {
+      ev.preventDefault();
+      // 收集表单数据(这里采用refs的方式)
+      const usernameVal = this.usernameRef.current.value;
+      const pwdVal = this.pwdRef.current.value;
+      alert('用户名为:' + usernameVal + ';' + '密码为:' + pwdVal)
+    }
+    render() {
+      /*
+        form表单中有一个 onSubmit 事件(提交表单的事件),这个事件会在点击submit按钮的时候执行
+        然后收集表单中的数据向指定的地址提交表单中的数据
+        我们不想在点击提交的时候将数据提交,只需要静止这个事件的默认行为即可
+      */
+      return (
+        <form onSubmit={this.commit}>
+          用户名: <input type="text" ref={this.usernameRef}/> <br/>
+          密码: <input type="password" ref={this.pwdRef}/> <br/>
+          <input type="submit" value="登录"/>
+        </form>
+      )
+    }
+  }
+
+  // 渲染组件
+  ReactDOM.render(<Form/>, document.querySelector('#app'));
+</script>
+
+</html>
