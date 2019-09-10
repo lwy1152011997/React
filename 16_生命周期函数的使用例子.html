@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+<script src="./js/react.development.js"></script>
+<script src="./js/react-dom.development.js"></script>
+<script src="./js/prop-types.js"></script>
+<script src="./js/babel.min.js"></script>
+<script type="text/babel">
+  // 需求: 标题一直处于重复透明度的变化的状态,点击卸载后让标题消失
+
+  //创建组件
+  class Title extends React.Component{
+    // 只要界面有变化,就要考虑使用state,再考虑将state中的数据定义为什么类型
+    state = {
+      opacity: 1
+    }
+    componentDidMount() {
+      this.timerId = setInterval(() => {
+        let {opacity} = this.state;
+        if (opacity <= 0) opacity = 1
+        this.setState({
+          opacity: opacity - 0.01
+        })
+      }, 1000/60)
+    }
+
+    clearAway = () => {
+      // 点击后卸载组件
+      ReactDOM.unmountComponentAtNode(document.getElementById('app')); // 这个方法可以将容器内的所有组件卸载
+    }
+    componentWillUnmount() {
+      // 这个生命周期函数 表示 组件将要被卸载,也只会触发一次
+      // 在这个函数内我们主要 用来清除之前设置的定时器,和取消还没有发送的ajax请求
+      clearInterval(this.timerId)
+    }
+
+    render() {
+      const {opacity} = this.state;
+      /*
+        JSX语法中的标签的样式需要按照 style={{样式}} 这样来写
+      */
+      return (
+        <div>
+          <h2 style={{opacity}}>我真的是太南了</h2>
+          <button onClick={this.clearAway}>清醒点</button>
+        </div>
+      )
+    }
+  }
+  // 初次渲染组件
+  ReactDOM.render(<Title/>, document.querySelector('#app'));
+</script>
+</html>
