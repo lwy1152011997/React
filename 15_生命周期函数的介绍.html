@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+<script src="./js/react.development.js"></script>
+<script src="./js/react-dom.development.js"></script>
+<script src="./js/prop-types.js"></script>
+<script src="./js/babel.min.js"></script>
+<script type="text/babel">
+  // 组件中的生命周期函数执行顺序 constructor > componentWillMount > render > componentDidMount
+  // 注意: constructor componentWillMount componentDidMount 这三个生命周期函数只会执行一次,
+  //       render函数可能会执行多次(组件的初次渲染和数据的更新都会多次调用render函数)
+  //       react中组件的生命周期函数内的 this都指向组件的实例对象
+
+  class LifeFn extends React.Component {
+    // 现在要了解的是,我们在开发过程中,什么时候需要用到哪个函数?
+
+    constructor() {
+      /* constructor函数中,我们一般用来初始化状态数据, 和改变组件内this的指向, 以及初始化React.createRef()
+         因为这个函数会最先执行而且只会执行一次,我们的数据状态和this指向就都能够确定下来,
+         后面的操作步骤中,我们就可以直接对数据状态进行操作以及直接使用this
+
+         注意: 因为现在我们都多用简写方式,所以很少书写constructor()这个方法了
+      */
+      super();
+      console.log('constructor()调用了');
+      this.state = {
+        isUpdate: false
+      }
+    }
+
+    componentWillMount() {
+      /*
+        这个函数表示:组件将要挂载到指定容器内
+        这个函数我们一般不用(因为要避免影响初次渲染的速度)
+        如果想要在render()方法执行之前,对某些操作进行准备工作,可以在这个函数内进行
+      */
+      console.log('componentWillMount()调用了');
+    }
+
+    componentDidMount() {
+      /*
+        componentDidMount()方法,表示组件已经被挂载到指定的容器上,已经渲染为真实DOM了.
+        这个方法我们开发过程中使用得比较多
+        开发过程中这个方法内我们主要的操作有: 发送ajax请求,设置定时器等异步操作
+        (因为,我们不想,我们在发送的ajax请求的时候影响到组件的初次渲染,所以我们不会考虑在 constructor 和
+        componentWillMount 这两个函数中进行;
+        而且这个函数只会执行一次,我们的ajax请求数据的时候,只需要请求一次就可以了,不需要重复发送请求.
+        )
+      */
+      console.log('componentDidMount()调用了');
+    }
+
+    // 下面几个生命周期函数只有在组件数据更新后或者父组件重新渲染才会触发的
+    // 每次重新渲染的执行顺序 shouldComponentUpdate > componentWillUpdate > render > componentDidUpdate
+    shouldComponentUpdate(newestProps,newestState) {
+      /*
+        这个生命周期函数表示的是数据是否将要更新
+        它必须要主动返回一个布尔值(true / false),如果不主动返回将会报错
+        这个生命周期中,开发的时候我们一般用来做性能优化的;
+        通过判断之前的state/props的值是否和最新的值相等,如果相等就不更新(重新调用render()方法),如果不相等就更新
+      */
+      console.log('shouldComponentUpdate()调用了');
+      // 在函数内定义两个形参 newestProps,newestState,可以接收到最新的 props和state中的数据状态
+      // 然后我们获取之前的数据状态,将之前的数据状态和这两个做比较
+      const prevState = this.state.isUpdate; // 获取之前的数据状态
+      const newState = newestState.isUpdate; // 获取最新的数据状态
+      if (prevState === newState) {return false};
+      return true
+    }
+    componentWillUpdate() {
+      // 一般不用
+      console.log('componentWillUpdate()调用了');
+    }
+    componentDidUpdate() {
+      // 这个生命周期函数一般也是用来发送ajax请求
+      // 但是存在一个问题:
+      // 就是每次发送请求完之后我们都会更新数据状态,
+      // 这样又会重新调用这个方法再发请求重新渲染组件,就会陷入一个死循环,所以在这里写的ajax请求需要有限制条件
+      // 重要的是这个生命周期函数我们也是一般不用
+      console.log('componentDidUpdate()调用了');
+    }
+
+    update =() => {
+      this.setState({
+        isUpdate: true
+      })
+    }
+    // 一般我们将render方法写在最后,但是执行顺序和书写顺写无关
+    render() {
+
+      /*
+        render()方法的主要作用就是将需要渲染的虚拟DOM对象返回出来
+      */
+      console.log('render()方法调用了');
+      return (
+        <div onClick={this.update}>ll</div>
+      )
+    }
+  }
+
+  // 一定要调用 ReactDOM.render()方法才会执行对组件的初次渲染
+  ReactDOM.render(<LifeFn/>, document.querySelector('#app'));
+</script>
+</html>
