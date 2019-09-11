@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <!--react的开发按流程:
+    (react中最外层默认有一个应用根组件,其他组件都是它的子组件)
+    拆分组件 > (根据页面的功能或者根据页面有没有变化来拆分,只要某个部分有功能或者有变化,都可以将它们拆分为组件)
+    实现静态页面组件 > (只包含html,css的静态页面)
+    将静态组件实现为功能组件 >
+    (实现动态的,功能的组件需要考虑以下几点:
+      是否需要定义 state ? 只要用户界面会发生变化就需要定义state
+      state需要定义为什么类型,state里面应该保存什么类型的值?
+        > 如果数据需要遍历展示到页面中就考虑使用数组来保存这些数据
+      state需要定义在哪个组建中?
+        > 谁需要使用到状态数据就把state定义在哪里(如果单个组件需要用到就定义在自己的组件中),
+          如果多个组件都需要同时用到相同的数据,那么我们就将state定义在它们公共的父组件中
+    )
+
+    重点:
+    实现功能的时候,我们一般都是 先实现数据的动态展示 再实现对数据的操作
+
+    组件的定义方式一般从大到小定义,由全局都局部
+
+    父组件向子组件通过props的方式传递数据的时候,要进行完整的套路, 传递 > 限制数据类型 > 再使用
+    因为组件对state中的数据,我们推荐只能进行读取,不能进行修改
+    所以state的数据源定义在哪里我们就把修改state中的数据的方法定义在哪里
+    一般如果父组件向子组件传递的是非函数的数组,那么就是想让子组件直接使用
+    如果给子组件传递是函数,那么是希望子组件调用这个函数来修改父组件中的state数据
+  -->
+</body>
+<script src="./js/react.development.js"></script>
+<script src="./js/react-dom.development.js"></script>
+<script src="./js/prop-types.js"></script>
+<script src="./js/babel.min.js"></script>
+<script type="text/babel">
+  /* 需求: 做一个todoList */
+
+  // App 组件
+  class App extends React.Component{
+    state = {
+      todoList: ['qqq', 'www', 'eee']
+    }
+    // 修改数据的方法
+    updateTodoList = (todoItem) => {
+      const {todoList} = this.state
+      this.setState({
+        todoList: [todoItem, ...todoList]
+      })
+    }
+    render() {
+      const {todoList} = this.state;
+      return (
+        <div>
+          <h2>todoList</h2>
+          <AddTodo updateTodoList={this.updateTodoList} todoLength={todoList.length}/>
+          <TodoList todoList={this.state.todoList}/> {/* 通过props的方式向子组件传递数据 */}
+        </div>
+      )
+    }
+  }
+
+  // AddTodo 组件
+  class AddTodo extends React.Component{
+    static propTypes = {
+      updateTodoList: PropTypes.func.isRequired
+    }
+    static propTypes = {
+      todoLength: PropTypes.number.isRequired
+    }
+
+    inputRef = React.createRef(); // 使用ref来获取到input框中的值
+
+    // 添加内容
+    addTodo = () => {
+      const input = this.inputRef.current;
+      const {value} = input;
+      this.props.updateTodoList(value);
+      input.value = ''; // 清空input框中的值
+    }
+    render() {
+      const todoLength = this.props.todoLength; // 获取props中todoLength的值
+      return (
+        <div>
+          <input placeholder="请输入需要添加的内容" ref={this.inputRef}/>
+          <button onClick={this.addTodo}>#{todoLength}添加</button>
+        </div>
+      )
+    }
+  }
+
+  // TodoList 组件
+  class TodoList extends React.Component{
+    // 限制数据类型
+    static propTypes = {
+      todoList: PropTypes.array
+    }
+    render() {
+      const totoList = this.props.todoList
+      return (
+        <ul>
+          {
+            totoList.map((item,index) => {
+              return (
+                <li key={index}>{item}</li>
+              )
+            })
+          }
+        </ul>
+      )
+    }
+  }
+
+  //渲染组件
+  ReactDOM.render(<App />, document.querySelector('#app'));
+  // 渲染父组件,子组件就会被自动渲染
+</script>
+
+</html>
