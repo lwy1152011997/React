@@ -1,4 +1,4 @@
-##react架手架的创建流程
+## react架手架的创建流程
   + npm i create-react-app -g 全局安装,并配置环境变量
     (react脚手架的主要技术用到了react框架,webpack打包工具,es语法,eslint语法检查,babel编译工具)
     (使用脚手架开发的特点在于可以 模块化,组件化,工程化开发)
@@ -12,7 +12,7 @@
   + yarn test 测试代码
   
   
-##项目文件内的目录介绍
+## 项目文件内的目录介绍
  + build文件夹 是使用yarn build 命令之后生成的上线项目的代码文件,如果没有使用yarn build 命令,是不会存在的;
  + node_modules文件夹 是react架手架所依赖包的文件夹
  + pubilc文件夹 开发的时候用来放置静态资源

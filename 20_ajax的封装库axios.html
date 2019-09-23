@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <!--
+    发送ajax请求的库axios:
+
+    axios的使用方法:
+      axios.get('请求地址') 它的返回值是一个promise对象,可以进行下面的操作
+        .then(成功的回调函数() =>{})
+        .catch(失败的回调函数 () =>{})
+      (更加具体的用法请参考官网的指导)
+  -->
+</body>
+<script src="./js/react.development.js"></script>
+<script src="./js/react-dom.development.js"></script>
+<script src="./js/babel.min.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.19.0/axios.min.js"></script>
+<script type="text/babel">
+  /*
+    需求:发送请求拿到指定的地址然后可点击跳转
+  */
+  class SearchContent extends React.Component {
+    state = {
+      reqName: '',
+      url: ''
+    }
+    // 发送请求,在react中我们都在componentDidMount() 生命周期函数中进行
+    componentDidMount() {
+      axios.get('https://api.github.com/search/repositories?q=r&sort=stars')
+        .then( (res) => {
+          console.log(res);
+          /* 可以看到我们向请求地址发送的请求,它响应回来的数据会在res中进行保存
+              config 保存我们客户端发送的请求相关的内容
+              data 是我们所要用到的所要操作的数据
+              request 中的abort方法可以取消请求的发送
+          */
+          const {name, html_url} = res.data.items[0];
+          this.setState({
+            reqName: name,
+            url: html_url
+          })
+        } )
+        .catch( (error) => {
+          console.log(error);
+        } )
+    }
+
+    render() {
+      const {reqName, url} = this.state;
+      // 通过发送请求得到reqName,如果得到了就有值,那么显示前面的,没有值就显示loading
+      return (
+        reqName ? <h2>Most Star is <a href={ url }>{ reqName }</a></h2> : <h2>loading...</h2>
+      )
+    }
+  }
+
+  ReactDOM.render(<SearchContent />, document.getElementById('app'));
+</script>
+</html>
