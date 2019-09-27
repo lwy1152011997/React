@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link, Route, Redirect, NavLink, Switch} from 'react-router-dom';
+// 一级路由
 // react-router 中的 Link组件
 // 它的作用类似于a标签,是一个跳转链接,
 // Link组件中用to属性来指示点击这个链接后会跳转到哪个指定组件(类似于a标签的href属性),但是不会刷新界面,

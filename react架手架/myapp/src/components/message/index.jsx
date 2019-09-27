@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Route} from 'react-router-dom';
+import Detail from "../details";
 
 class Message extends Component {
   state = {
@@ -16,7 +17,7 @@ class Message extends Component {
         messages: [
           {id: '1', content: '麦迪,姚明'},
           {id: '2', content: '大联妹'},
-          {id: '3', content: '没有一个认识的'},
+          {id: '3', content: '曹芳'},
         ]
       })
     },500)
@@ -25,18 +26,29 @@ class Message extends Component {
   render() {
     const {messages} = this.state;
     return (
-      <ul>
-        {
-          messages.map((item) => {
-            return (
-              <li key={item.id}>
-                <Link to={`/about/message/${item.id}`}>{item.content}</Link>
-                {/*  */}
-              </li>
-            )
-          })
-        }
-      </ul>
+      <div>
+        <ul>
+          {
+            messages.map((item) => {
+              return (
+                <li key={item.id}>
+                  <Link to={`/about/message/${item.id}`}>{item.content}</Link>
+                  {/**/}
+                </li>
+              )
+            })
+          }
+        </ul>
+        <Route path="/about/message/:id" component={Detail}></Route>
+        {/*
+         三级路由的使用:
+         简单理解:路由组件中的路由组件中的路由组件.称为三级路由
+         三级路由组件要根据上一级的路由组件被点击的时候展示出来,
+         它的 path属性的的写法: path="about/message/:id"
+         :id 可以匹配到 <Link to={`/about/message/${item.id}`}> 中的 最后一个位置id;
+         component 组件的显示会根据匹配的组件展示组件中的内容
+         */}
+      </div>
     )
   }
 }
