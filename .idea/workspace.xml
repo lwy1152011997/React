@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e09ff7a6-9e75-4596-99ad-8901450bf0de" name="默认的" comment="" />
+    <list default="true" id="e09ff7a6-9e75-4596-99ad-8901450bf0de" name="默认的" comment="2019-9-12,继续学,react脚手架">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react架手架/myapp/01_src评论管理练习/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react架手架/myapp/01_src评论管理练习/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react架手架/myapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react架手架/myapp/package.json" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -12,31 +17,102 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/App.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+              <folding>
+                <element signature="e#76#102#0" expanded="true" />
+                <element signature="e#249#258#0" />
+                <element signature="e#493#528#0" />
+                <element signature="e#625#678#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="JSX" />
       </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>prop-types</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Users\TonyLiu\Desktop\react技术栈\react架手架\myapp\node_modules</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/01_helloReact.html" />
-        <option value="$PROJECT_DIR$/02_React中的JSX语法.html" />
-        <option value="$PROJECT_DIR$/02_虚拟DOM的创建方式.html" />
-        <option value="$PROJECT_DIR$/03_React中的JSX语法.html" />
-        <option value="$PROJECT_DIR$/04_JSX语法练习.js" />
-        <option value="$PROJECT_DIR$/05_ES6通过class定义类.html" />
-        <option value="$PROJECT_DIR$/04_JSX语法练习.html" />
         <option value="$PROJECT_DIR$/06_什么是组件.html" />
         <option value="$PROJECT_DIR$/07_怎么创建组件.html" />
         <option value="$PROJECT_DIR$/08_组件的state属性.js" />
         <option value="$PROJECT_DIR$/08_组件的state属性.html" />
         <option value="$PROJECT_DIR$/09_组件的props属性.html" />
+        <option value="$PROJECT_DIR$/10_组件的refs属性.html" />
+        <option value="$PROJECT_DIR$/11_收集表单中的数据.html" />
+        <option value="$PROJECT_DIR$/11_收集表单中的数据(非受控组件的方式).html" />
+        <option value="$PROJECT_DIR$/13_高阶函数.html" />
+        <option value="$PROJECT_DIR$/14_组件中的生命周期函数.html" />
+        <option value="$PROJECT_DIR$/14_组件中的生命周期函数(重要).html" />
+        <option value="$PROJECT_DIR$/15_生命周期函数的使用.html" />
+        <option value="$PROJECT_DIR$/16_生命周期函数的使用例子.html" />
+        <option value="$PROJECT_DIR$/17_组件的组合使用todoList.html" />
+        <option value="$PROJECT_DIR$/18_虚拟DOM的Diff算法.html" />
+        <option value="$PROJECT_DIR$/18_key值的问题.html" />
+        <option value="$PROJECT_DIR$/19_key值的问题.html" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/public/manifest.json" />
+        <option value="$PROJECT_DIR$/react架手架/react脚手架创建的流程.md" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/App.js" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/package.json" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/comment-item/index.css" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/public/index.css" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/comments-list/index.css" />
+        <option value="$PROJECT_DIR$/12_收集表单数据(采用受控组件的方式).html" />
+        <option value="$PROJECT_DIR$/20_ajax的封装库axios.js" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/lists/css/index.css" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/search/index.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/lists/index.jsx" />
+        <option value="$PROJECT_DIR$/20_ajax的封装库axios.html" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/About/index.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/Home/index.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/01_reactrouter的介绍" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/home/index.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/css/index.css" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/about/index.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/news/index.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/APP.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/message/index.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/details/index.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/public/index.html" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/index.js" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/Add-Comment/AddComment.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/CommentList/CommentList.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/pubsub事件总线的使用" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/comment-item/index.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/commentlist/CommentList.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/add-comment/AddComment.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/App.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/comments-list/index.jsx" />
+        <option value="$PROJECT_DIR$/react架手架/myapp/src/components/add-comment/index.jsx" />
       </list>
     </option>
   </component>
@@ -46,11 +122,14 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="117" />
-    <option name="y" value="6" />
-    <option name="width" value="1660" />
-    <option name="height" value="1015" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="95" />
+    <option name="y" value="25" />
+    <option name="width" value="1730" />
+    <option name="height" value="1010" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="添加" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -65,6 +144,24 @@
               <item name="react技术栈" type="b2602c69:ProjectViewProjectNode" />
               <item name="react技术栈" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="react技术栈" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react技术栈" type="462c0819:PsiDirectoryNode" />
+              <item name="react架手架" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react技术栈" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react技术栈" type="462c0819:PsiDirectoryNode" />
+              <item name="react架手架" type="462c0819:PsiDirectoryNode" />
+              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react技术栈" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react技术栈" type="462c0819:PsiDirectoryNode" />
+              <item name="react架手架" type="462c0819:PsiDirectoryNode" />
+              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -74,15 +171,25 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/react架手架/myapp/src" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\TonyLiu\Desktop\react技术栈\js" />
+      <recent name="C:\Users\TonyLiu\Desktop\react技术栈\react架手架\myapp\src" />
+      <recent name="C:\Users\TonyLiu\Desktop\react技术栈\react架手架\myapp" />
+      <recent name="C:\Users\TonyLiu\Desktop\react技术栈\react架手架\myapp\src\css" />
+      <recent name="C:\Users\TonyLiu\Desktop\react技术栈\react架手架\myapp\src\components\message" />
+      <recent name="C:\Users\TonyLiu\Desktop\react技术栈\react架手架\myapp\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TonyLiu\Desktop\react技术栈\react架手架\myapp\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -112,16 +219,115 @@
       <workItem from="1567598118891" duration="8135000" />
       <workItem from="1567733230779" duration="5615000" />
       <workItem from="1567782606219" duration="17231000" />
+      <workItem from="1567867108227" duration="68000" />
+      <workItem from="1567867181374" duration="8166000" />
+      <workItem from="1567990064579" duration="198000" />
+      <workItem from="1567990281662" duration="20778000" />
+      <workItem from="1568166731777" duration="16004000" />
+      <workItem from="1568592841047" duration="8533000" />
+      <workItem from="1568806516882" duration="16432000" />
+      <workItem from="1569242691540" duration="9390000" />
+      <workItem from="1569405345414" duration="10456000" />
+      <workItem from="1569499103800" duration="8033000" />
+      <workItem from="1569579983658" duration="6516000" />
+      <workItem from="1569595566761" duration="557000" />
+      <workItem from="1569666587100" duration="7686000" />
     </task>
+    <task id="LOCAL-00001" summary="props注意点">
+      <created>1567867648158</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567867648158</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2019-9-9,继续学">
+      <created>1568002226598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568002226598</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2019-9-10,继续学">
+      <created>1568084593995</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568084593995</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2019-9-10,继续学">
+      <created>1568084608982</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568084608982</updated>
+    </task>
+    <task id="LOCAL-00005" summary="2019-9-11,超简单的todolist">
+      <created>1568171540887</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568171540887</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2019-9-12,继续学,react脚手架">
+      <created>1568301274234</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568301274234</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2019-9-19,懒了一周了,XoX,今天完成脚手架的评论练习">
+      <created>1568868319546</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1568868319546</updated>
+    </task>
+    <task id="LOCAL-00008" summary="2019-9-12,继续学,axios.懒惰会让人更懒">
+      <created>1569253357143</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569253357143</updated>
+    </task>
+    <task id="LOCAL-00009" summary="2019-9-26-路由学习ing...,页面存在一个问题,每次编辑代码都会让bootstrap的样式失效,不明白什么原因.">
+      <created>1569509679691</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569509679691</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2019-9-27-路由">
+      <created>1569593598843</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569593598843</updated>
+    </task>
+    <task id="LOCAL-00011" summary="2019-9-12,继续学,react脚手架">
+      <created>1569593781408</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1569593781408</updated>
+    </task>
+    <task id="LOCAL-00012" summary="2019-9-28兄弟组件之间的数据传递pubsub">
+      <created>1569678696903</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1569678696903</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32562000" />
+    <option name="totallyTimeSpent" value="145379000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="94" y="5" width="1328" height="812" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18885449" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20343462" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -133,10 +339,12 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.46600565" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="运行" order="11" />
       <window_info anchor="bottom" id="调试" order="12" />
+      <window_info anchor="bottom" id="消息" order="13" weight="0.32941177" />
+      <window_info anchor="bottom" id="找到" order="14" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -145,82 +353,318 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="props注意点" />
+    <MESSAGE value="2019-9-9,继续学" />
+    <MESSAGE value="2019-9-10,继续学" />
+    <MESSAGE value="2019-9-11,超简单的todolist" />
+    <MESSAGE value="2019-9-19,懒了一周了,XoX,今天完成脚手架的评论练习" />
+    <MESSAGE value="2019-9-12,继续学,axios.懒惰会让人更懒" />
+    <MESSAGE value="2019-9-26-路由学习ing...,页面存在一个问题,每次编辑代码都会让bootstrap的样式失效,不明白什么原因." />
+    <MESSAGE value="2019-9-27-路由" />
+    <MESSAGE value="2019-9-12,继续学,react脚手架" />
+    <MESSAGE value="2019-9-28兄弟组件之间的数据传递pubsub" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-9-28兄弟组件之间的数据传递pubsub" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/react-dom.development.js">
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/00_public_原版架手架目录介绍/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/02_虚拟DOM的创建方式.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03_React中的JSX语法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_JSX语法练习" />
-    <entry file="file://$PROJECT_DIR$/05_ES6通过class定义类.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="72" column="16" lean-forward="true" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_JSX语法练习.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/06_什么是组件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01_helloReact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/08_组件的state属性">
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/01_public评论管理练习/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/07_怎么创建组件.html">
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/node_modules/prop-types/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="38" column="68" lean-forward="true" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/08_组件的state属性.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" selection-start-line="22" selection-end-line="24" selection-end-column="41" />
-          <folding>
-            <element signature="e#509#1776#0" />
-          </folding>
+        <state relative-caret-position="84">
+          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/prop-types.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/09_组件的props属性.html">
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/node_modules/prop-types/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="60" column="6" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="24" />
+        <state relative-caret-position="42">
+          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/01_src评论管理练习/components/comment-item/index.css" />
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/public/index.css" />
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/01_public评论管理练习/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12_收集表单数据(采用受控组件的方式).html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/01_src评论管理练习/components/comments-list/index.css" />
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/01_src评论管理练习/components/add-comment/index.jsx" />
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/01_src评论管理练习/components/comment-item/index.jsx" />
+    <entry file="file://$PROJECT_DIR$/20_ajax的封装库axios.js" />
+    <entry file="file://$PROJECT_DIR$/17_组件的组合使用todoList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="38" selection-start-line="38" selection-end-line="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/00_src_原版架手架目录介绍/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding>
-            <element signature="e#1561#1826#0" />
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/01_src评论管理练习/components/add-comment/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding>
+            <element signature="e#10#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/lists/css/index.css" />
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="298" column="8" selection-start-line="298" selection-start-column="8" selection-end-line="298" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20_ajax的封装库axios.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="959">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/search/index.jsx" />
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/lists/index.jsx" />
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/02_src-axios练习,搜索图片/APP.jsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/02_punlic搜索图片/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/react脚手架创建的流程.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="126">
+            <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/node_modules/react-router/esm/react-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="409" column="4" selection-start-line="409" selection-start-column="4" selection-end-line="409" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/01_reactrouter的介绍">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="441">
+            <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/public/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/news/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/home/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/about/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/message/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/details/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/03_src-路由(1级2级3级路由的使用)/css/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/01_src评论管理练习/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/01_src评论管理练习/App.jsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/01_src评论管理练习/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/01_src评论管理练习/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#122#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/01_src评论管理练习/components/comments-list/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/comment-item/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/add-comment/AddComment.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/commentlist/CommentList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/pubsub事件总线的使用">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="189">
+            <caret line="9" selection-start-line="9" selection-end-line="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/comments-list/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+          <folding>
+            <element signature="e#12#51#0" expanded="true" />
+            <element signature="e#98#140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/components/add-comment/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
+            <element signature="e#10#49#0" expanded="true" />
+            <element signature="e#880#921#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react架手架/myapp/src/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="e#76#102#0" expanded="true" />
+            <element signature="e#249#258#0" />
+            <element signature="e#493#528#0" />
+            <element signature="e#625#678#0" />
           </folding>
         </state>
       </provider>

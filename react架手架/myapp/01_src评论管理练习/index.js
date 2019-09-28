@@ -7,4 +7,4 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App'; // 引入
-ReactDOM.render(<App/>, document.querySelector('#root')); // 渲染
+ReactDOM.render(<App/>, document.querySelector('#app')); // 渲染
